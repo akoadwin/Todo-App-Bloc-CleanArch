@@ -42,7 +42,7 @@ class AuthRemoteDatasoure {
 
   // return SESSION from appwrite
   Future<Session> login(LoginModel loginModel) async {
-    final session = await _account.createEmailSession(
+    final session = await _account.createEmailPasswordSession(
         email: loginModel.email, password: loginModel.password);
 
     return session;
